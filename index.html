@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#160e1b">
+  <title>Something For You ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- MUSIC THAT STAYS THROUGH ALL PAGES -->
+  <audio id="music" loop>
+    <source src="tum-se-hi.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="musicButton" class="music-button" onclick="toggleMusic()">
+    ▶ Play Tum Se Hi
+  </button>
+
+  <main>
+
+    <!-- PAGE 1 -->
+    <section class="page active" id="page1">
+      <div class="eyebrow">A LITTLE SOMETHING FOR YOU</div>
+
+      <div class="music-art">♫ ♪ ♡ ♪ ♫</div>
+
+      <h1>Hey, Beautiful ❤️</h1>
+      <p class="subtitle">There's something I've wanted to tell you...</p>
+
+      <div class="letter">
+        <p>
+          You know, sometimes someone comes into our life
+          without any special reason, but slowly becomes
+          one of the most beautiful parts of our everyday life.
+        </p>
+
+        <p>
+          For me, that person is you. Your smile, your little
+          talks, your happiness and even your silly moments
+          make my days better.
+        </p>
+
+        <p>
+          I don't know what the future holds, but I know
+          that I genuinely enjoy having you in my life.
+          I just wanted you to know how special you are to me.
+        </p>
+
+        <p class="signature">With lots of affection ❤️</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <h2>Play a melody for me 🎸</h2>
+      <p>Swipe across the guitar strings to continue.</p>
+
+      <div class="guitar" id="guitar">
+        <div class="guitar-label">STRUM TO CONTINUE</div>
+        <div class="strings">
+          <div class="string" data-note="0"></div>
+          <div class="string" data-note="1"></div>
+          <div class="string" data-note="2"></div>
+          <div class="string" data-note="3"></div>
+          <div class="string" data-note="4"></div>
+          <div class="string" data-note="5"></div>
+        </div>
+      </div>
+
+      <p id="guitarStatus">♪ Waiting for your melody...</p>
+    </section>
+
+
+    <!-- PAGE 2 -->
+    <section class="page" id="page2">
+      <div class="eyebrow">A COLLECTION OF BEAUTIFUL MOMENTS</div>
+
+      <h1>Our Little World 📸</h1>
+
+      <p class="subtitle">
+        Every picture has a story. Here's a little space for yours.
+      </p>
+
+      <label class="upload-box" for="photoInput">
+        <span>＋</span>
+        <strong>Add your favourite photos</strong>
+        <small>Select pictures from your phone</small>
+      </label>
+
+      <input
+        type="file"
+        id="photoInput"
+        accept="image/*"
+        multiple
+        hidden
+      >
+
+      <div class="gallery" id="gallery">
+        <p class="empty">Your beautiful memories will appear here ❤️</p>
+      </div>
+
+      <p class="gallery-caption">
+        Some moments deserve to be remembered forever.
+      </p>
+
+      <button class="primary" onclick="goToPage(3)">
+        There's one more thing... ❤️
+      </button>
+    </section>
+
+
+    <!-- PAGE 3 -->
+    <section class="page" id="page3">
+      <div class="eyebrow">A QUESTION FROM MY HEART</div>
+
+      <div class="big-heart">❤️</div>
+
+      <h1>Will You Be Mine?</h1>
+
+      <p class="proposal-text">
+        I don't promise a perfect story, but I would love
+        to create beautiful memories with you, make you
+        smile and be someone you can count on.
+      </p>
+
+      <h2>Would you like to give us a chance? 🥹</h2>
+
+      <div class="choice-zone" id="choiceZone">
+        <button class="yes-button" onclick="showAnswer('yes')">
+          Yes, I'd love to ❤️
+        </button>
+
+        <button class="time-button" id="timeButton"
+          onclick="showAnswer('time')">
+          I need some time 🌷
+        </button>
+      </div>
+
+      <p id="finalMessage" aria-live="polite"></p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
